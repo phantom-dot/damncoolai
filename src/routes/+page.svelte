@@ -1,10 +1,11 @@
 <script>
 import {Configuration,OpenAIApi} from "openai";
 import logo from "$lib/images/logo2.png"
+import {PUBLIC_OPEN_AI_KEY} from "$env/static/public";
 let is_loading;
 let res
 let prompt = '';
-const config=new Configuration({apiKey:"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"});
+const config=new Configuration({apiKey:PUBLIC_OPEN_AI_KEY});
 const api=new OpenAIApi(config);
 const image = async () => {
 	is_loading=true;
